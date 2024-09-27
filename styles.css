@@ -108,7 +108,7 @@ body {
     padding: 2px 3px; /* Espaciado alrededor del texto */
     border-radius: 2px; /* Bordes redondeados */
     font-weight: bold; /* Texto en negrita */
-    margin-bottom: 10px; /* Espacio debajo del texto "Gratis" */
+    margin-bottom: 5px; /* Espacio debajo del texto "Gratis" */
 }
 
 .btn-descarga {
