@@ -105,8 +105,8 @@ body {
 .gratis {
     background-color: #4CAF50; /* Fondo verde */
     color: white; /* Color del texto */
-    padding: 5px 10px; /* Espaciado alrededor del texto */
-    border-radius: 5px; /* Bordes redondeados */
+    padding: 3px 5px; /* Espaciado alrededor del texto */
+    border-radius: 3px; /* Bordes redondeados */
     font-weight: bold; /* Texto en negrita */
     margin-bottom: 10px; /* Espacio debajo del texto "Gratis" */
 }
@@ -114,9 +114,9 @@ body {
 .btn-descarga {
     background-color: #FF5722; /* Color del botón */
     color: white; /* Color del texto del botón */
-    padding: 10px 15px; /* Espaciado interno del botón */
+    padding: 5px 10px; /* Espaciado interno del botón */
     text-decoration: none; /* Sin subrayado */
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 3px; /* Bordes redondeados */
     text-align: center; /* Centrar texto */
     display: inline-block; /* Mostrar como bloque en línea */
     transition: background-color 0.3s; /* Transición suave para el color */
