@@ -191,3 +191,8 @@ body {
         transform: scale(1); /* Volver al tamaño original */
     }
 }
+
+.espacio-inferior {
+    height: 100px; /* Altura del espacio adicional */
+    background-color: transparent; /* No visible, solo espacio */
+}
