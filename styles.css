@@ -193,6 +193,6 @@ body {
 }
 
 .espacio-inferior {
-    height: 100px; /* Altura del espacio adicional */
+    height: 40px; /* Altura del espacio adicional */
     background-color: transparent; /* No visible, solo espacio */
 }
