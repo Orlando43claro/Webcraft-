@@ -1,7 +1,10 @@
+/* Aumentar el espacio en la parte inferior de la página */
 body {
     margin: 0;
     background-color: #f0f0f0;
+    padding-bottom: 80px; /* Espacio inferior adicional */
 }
+
 
 .header {
     display: flex;
