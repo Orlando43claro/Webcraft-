@@ -1,4 +1,3 @@
-css
 body {
     margin: 0;
     background-color: #f0f0f0;
@@ -47,11 +46,28 @@ body {
     }
 }
 
+
+
 #tarjetas {
     display: flex;
     justify-content: space-around; /* Espacio entre tarjetas */
     padding: 20px; /* Espaciado alrededor de las tarjetas */
 }
+
+
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .card {
     background-color: white; /* Fondo blanco para las tarjetas */
@@ -84,6 +100,48 @@ body {
     margin-bottom: 5px; /* Espacio debajo del texto "Gratis" */
 }
 
+
+/* Navegador inferior fijo */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.nav-item {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav-item i {
+    font-size: 24px;
+    color: #FF5722;
+}
+
+.nav-item span {
+    display: block;
+    margin-top: 5px;
+    color: #333;
+}
+
+.nav-item:hover i, .nav-item:hover span {
+    color: #E64A19;
+}
+
+
+
+
+
 .btn-descarga {
     background-color: #FF5722; /* Color del botón */
     color: white; /* Color del texto del botón */
@@ -97,4 +155,36 @@ body {
 
 .btn-descarga:hover {
     background-color: #E64A19; /* Color al pasar el mouse */
+}
+.btn-descarga {
+    background-color: #FF5722; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    padding: 5px 15px; /* Espaciado interno del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 3px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+    display: inline-block; /* Mostrar como bloque en línea */
+    transition: background-color 0.3s; /* Transición suave para el color */
+}
+
+.btn-descarga:active {
+    transform: scale(0.95); /* Efecto de "presionar" el botón */
+}
+
+.btn-descarga.animacion {
+    animation: downloading 1s forwards; /* Aplicar animación */
+}
+
+@keyframes downloading {
+    0% {
+        background-color: #FF5722; /* Color inicial */
+    }
+    50% {
+        background-color: #E64A19; /* Color intermedio */
+        transform: scale(0.95); /* Efecto de "presionar" */
+    }
+    100% {
+        background-color: #FF5722; /* Volver al color inicial */
+        transform: scale(1); /* Volver al tamaño original */
+    }
 }
