@@ -36,34 +36,7 @@ body {
     color: #333; /* Color del texto del título */
     font-family: 'Arial', sans-serif;
 }
-
-.menu {
-    background-color: transparent; /* Fondo transparente */
-    padding: 10px 20px; /* Espaciado alrededor del menú */
-}
-
-.menu ul {
-    list-style-type: none; /* Sin viñetas */
-    padding: 0; /* Sin padding */
-    display: flex; /* Menú horizontal */
-    justify-content: flex-start; /* Alinear a la izquierda */
-}
-
-.menu li {
-    margin-right: 20px; /* Espacio entre los elementos del menú */
-}
-
-.menu a {
-    text-decoration: none; /* Sin subrayado */
-    color: #333; /* Color del texto */
-    font-family: 'Arial', sans-serif;
-    font-size: 18px; /* Tamaño del texto */
-    transition: color 0.3s; /* Transición suave para el color */
-}
-
-.menu a:hover {
-    color: #FF5722; /* Color al pasar el mouse */
-}
+ 
 
 @keyframes giro {
     from {
