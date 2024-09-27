@@ -1,0 +1,127 @@
+css
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinear a la izquierda */
+    padding: 20px; /* Espaciado alrededor */
+}
+
+.icono-webcraft {
+    width: 64px; /* Tamaño del icono */
+    height: 64px; /* Tamaño del icono */
+    background-color: #FF5722; /* Color naranja fuerte */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: giro 5s infinite linear; /* Animación de giro */
+    margin-right: 10px; /* Espacio entre el icono y el título */
+}
+
+.letra {
+    font-size: 32px; /* Tamaño de la letra */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.titulo {
+    font-size: 24px; /* Tamaño del título */
+    color: #333; /* Color del texto del título */
+    font-family: 'Arial', sans-serif;
+}
+
+.menu {
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px 20px; /* Espaciado alrededor del menú */
+}
+
+.menu ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    display: flex; /* Menú horizontal */
+    justify-content: flex-start; /* Alinear a la izquierda */
+}
+
+.menu li {
+    margin-right: 20px; /* Espacio entre los elementos del menú */
+}
+
+.menu a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Color del texto */
+    font-family: 'Arial', sans-serif;
+    font-size: 18px; /* Tamaño del texto */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.menu a:hover {
+    color: #FF5722; /* Color al pasar el mouse */
+}
+
+@keyframes giro {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#tarjetas {
+    display: flex;
+    justify-content: space-around; /* Espacio entre tarjetas */
+    padding: 20px; /* Espaciado alrededor de las tarjetas */
+}
+
+.card {
+    background-color: white; /* Fondo blanco para las tarjetas */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    display: flex; /* Mostrar contenido en fila */
+    flex-direction: column; /* Colocar contenido en columna */
+    align-items: center; /* Centrar horizontalmente el contenido */
+    width: 300px; /* Ancho fijo de la tarjeta */
+    margin: 10px; /* Margen entre tarjetas */
+}
+
+.card img {
+    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.card-content {
+    padding: 15px; /* Espaciado interno del contenido de la tarjeta */
+    text-align: center; /* Centrar el texto */
+}
+
+.gratis {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Color del texto */
+    padding: 5px 10px; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 10px; /* Espacio debajo del texto "Gratis" */
+}
+
+.btn-descarga {
+    background-color: #FF5722; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+    display: inline-block; /* Mostrar como bloque en línea */
+    transition: background-color 0.3s; /* Transición suave para el color */
+}
+
+.btn-descarga:hover {
+    background-color: #E64A19; /* Color al pasar el mouse */
+}
