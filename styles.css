@@ -191,19 +191,3 @@ body {
         transform: scale(1); /* Volver al tamaño original */
     }
 }
-
-.footer {
-    background-color: #FF5722; /* Fondo oscuro */
-    color: white; /* Texto blanco */
-    text-align: center; /* Centrar el texto */
-    padding: 20px 0; /* Espaciado arriba y abajo */
-    position: relative; /* Posición relativa para alinearse con el contenido */
-    bottom: 0;
-    width: 100%; /* Ocupar todo el ancho de la página */
-    font-family: 'Arial', sans-serif;
-}
-
-.footer p {
-    margin: 0; /* Elimina el margen predeterminado */
-    font-size: 14px; /* Tamaño de texto pequeño */
-}
