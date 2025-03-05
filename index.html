@@ -3,75 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icono WebCraft</title>
+    <title>Lista de Tareas</title>
     <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Enlace a Font Awesome -->
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
 </head>
 <body>
-    <div class="header">
-        <div class="icono-webcraft">
-            <span class="letra">W</span>
-        </div>
-        <h1 class="titulo">WebCraft</h1><h3>Plantillas</h3>
-    </div>
-    
-<section id="tarjetas">
-    
-    <div class="card">
-        <img src="https://i.ibb.co/0hjZR9t/IMG-20240927-065133.png" alt="Descripción de la imagen 1">
-        <div class="card-content">
-            <span class="gratis">Gratis</span>
-            <a href="#" class="btn-descarga">Descargar</a>
-        </div>
-    </div>
 
-    <div class="card">
-        <img src="https://i.ibb.co/0hjZR9t/IMG-20240927-065133.png" alt="Descripción de la imagen 2">
-        <div class="card-content">
-            <span class="gratis">Gratis</span>
-            <a href="#" class="btn-descarga">Descargar</a>
-        </div>
-    </div>
-    
-</section>
+    <div id="message-container" class="hidden"></div> <!-- Mensajes -->
 
-    <section id="tarjetas">
-    
-    <div class="card">
-        <img src="https://i.ibb.co/0hjZR9t/IMG-20240927-065133.png" alt="Descripción de la imagen 1">
-        <div class="card-content">
-            <span class="gratis">Gratis</span>
-            <a href="#" class="btn-descarga">Descargar</a>
+    <div id="auth-container">
+        <div id="login-form" class="card">
+            <h2>Iniciar Sesión</h2>
+            <input type="email" id="login-email" placeholder="Correo electrónico">
+            <input type="password" id="login-password" placeholder="Contraseña">
+            <button onclick="login()">Ingresar</button>
+            <p>¿No tienes cuenta? <a href="#" onclick="toggleForms()">Regístrate</a></p>
+        </div>
+
+        <div id="register-form" class="card hidden">
+            <h2>Registro</h2>
+            <input type="text" id="register-name" placeholder="Nombre">
+            <input type="email" id="register-email" placeholder="Correo electrónico">
+            <input type="password" id="register-password" placeholder="Contraseña (mín. 6 caracteres)">
+            <button onclick="register()">Registrarse</button>
+            <p>¿Ya tienes cuenta? <a href="#" onclick="toggleForms()">Inicia sesión</a></p>
         </div>
     </div>
 
-    <div class="card">
-        <img src="https://i.ibb.co/0hjZR9t/IMG-20240927-065133.png" alt="Descripción de la imagen 2">
-        <div class="card-content">
-            <span class="gratis">Gratis</span>
-            <a href="#" class="btn-descarga">Descargar</a>
-        </div>
+    <div id="app-container" class="hidden">
+        <h2>Lista de Tareas</h2>
+        <button onclick="logout()">Cerrar Sesión</button>
+        <input type="text" id="task-title" placeholder="Título de la tarea">
+        <input type="text" id="task-desc" placeholder="Descripción">
+        <button onclick="addTask()">Agregar</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Autor</th>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>B</th>
+                </tr>
+            </thead>
+            <tbody id="task-list"></tbody>
+        </table>
     </div>
-    
-</section>
 
-<!-- Navegador inferior fijo -->
-    <nav class="bottom-nav">
-        <a href="#" class="nav-item">
-            <i class="fas fa-home"></i>
-            <span>Inicio</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-plus-circle"></i>
-            <span>Más</span>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="fas fa-th-large"></i> <!-- Icono de categoría -->
-            <span>Categoría</span>
-        </a>
-    </nav>
-
-    <div class="espacio-inferior"></div>
+    <script src="script.js"></script>
 </body>
 </html>

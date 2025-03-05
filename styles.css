@@ -1,198 +1,95 @@
-/* Aumentar el espacio en la parte inferior de la página */
 body {
-    margin: 0;
-    background-color: #f0f0f0;
-    padding-bottom: 50px; /* Espacio inferior adicional */
-}
-
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Alinear a la izquierda */
-    padding: 20px; /* Espaciado alrededor */
-}
-
-.icono-webcraft {
-    width: 64px; /* Tamaño del icono */
-    height: 64px; /* Tamaño del icono */
-    background-color: #FF5722; /* Color naranja fuerte */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: giro 5s infinite linear; /* Animación de giro */
-    margin-right: 10px; /* Espacio entre el icono y el título */
-}
-
-.letra {
-    font-size: 32px; /* Tamaño de la letra */
-    color: white;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-}
-
-.titulo {
-    font-size: 24px; /* Tamaño del título */
-    color: #333; /* Color del texto del título */
-    font-family: 'Arial', sans-serif;
-}
- 
-
-@keyframes giro {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
-#tarjetas {
-    display: flex;
-    justify-content: space-around; /* Espacio entre tarjetas */
-    padding: 20px; /* Espaciado alrededor de las tarjetas */
-}
-
-
-.card {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slide-in 0.5s forwards;
-}
-
-@keyframes slide-in {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-.card {
-    background-color: white; /* Fondo blanco para las tarjetas */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    display: flex; /* Mostrar contenido en fila */
-    flex-direction: column; /* Colocar contenido en columna */
-    align-items: center; /* Centrar horizontalmente el contenido */
-    width: 300px; /* Ancho fijo de la tarjeta */
-    margin: 10px; /* Margen entre tarjetas */
-}
-
-.card img {
-    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
-    height: auto; /* Mantener la proporción de la imagen */
-    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
-}
-
-.card-content {
-    padding: 15px; /* Espaciado interno del contenido de la tarjeta */
-    text-align: center; /* Centrar el texto */
-}
-
-.gratis {
-    background-color: #4CAF50; /* Fondo verde */
-    color: white; /* Color del texto */
-    padding: 2px 3px; /* Espaciado alrededor del texto */
-    border-radius: 2px; /* Bordes redondeados */
-    font-weight: bold; /* Texto en negrita */
-    margin-bottom: 5px; /* Espacio debajo del texto "Gratis" */
-}
-
-
-/* Navegador inferior fijo */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #FFFFFF;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-}
-
-.nav-item {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
     text-align: center;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    font-size: 14px;
-    text-decoration: none;
+    padding: 20px;
 }
 
-.nav-item i {
-    font-size: 24px;
-    color: #FF5722;
+.card {
+    background: white;
+    padding: 20px;
+    margin: auto;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
-.nav-item span {
-    display: block;
-    margin-top: 5px;
-    color: #333;
+.hidden {
+    display: none;
 }
 
-.nav-item:hover i, .nav-item:hover span {
-    color: #E64A19;
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-
-
-
-
-.btn-descarga {
-    background-color: #FF5722; /* Color del botón */
-    color: white; /* Color del texto del botón */
-    padding: 5px 15px; /* Espaciado interno del botón */
-    text-decoration: none; /* Sin subrayado */
-    border-radius: 3px; /* Bordes redondeados */
-    text-align: center; /* Centrar texto */
-    display: inline-block; /* Mostrar como bloque en línea */
-    transition: background-color 0.3s; /* Transición suave para el color */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.btn-descarga:hover {
-    background-color: #E64A19; /* Color al pasar el mouse */
-}
-.btn-descarga {
-    background-color: #FF5722; /* Color del botón */
-    color: white; /* Color del texto del botón */
-    padding: 5px 15px; /* Espaciado interno del botón */
-    text-decoration: none; /* Sin subrayado */
-    border-radius: 3px; /* Bordes redondeados */
-    text-align: center; /* Centrar texto */
-    display: inline-block; /* Mostrar como bloque en línea */
-    transition: background-color 0.3s; /* Transición suave para el color */
+button:hover {
+    background: #0056b3;
 }
 
-.btn-descarga:active {
-    transform: scale(0.95); /* Efecto de "presionar" el botón */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.btn-descarga.animacion {
-    animation: downloading 1s forwards; /* Aplicar animación */
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
 }
 
-@keyframes downloading {
-    0% {
-        background-color: #FF5722; /* Color inicial */
-    }
-    50% {
-        background-color: #E64A19; /* Color intermedio */
-        transform: scale(0.95); /* Efecto de "presionar" */
-    }
-    100% {
-        background-color: #FF5722; /* Volver al color inicial */
-        transform: scale(1); /* Volver al tamaño original */
-    }
+th {
+    background: #007bff;
+    color: white;
 }
 
-.espacio-inferior {
-    height: 10px; /* Altura del espacio adicional */
-    background-color: transparent; /* No visible, solo espacio */
+td i.delete-icon {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+td i.delete-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Mensajes en tarjetas */
+#message-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success {
+    background: #28a745;
+    color: white;
+}
+
+.error {
+    background: #dc3545;
+    color: white;
 }
